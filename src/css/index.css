@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar{
+    display: none;
+  }
+  .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;  
+  }
+};
+
+
+:root{
+  --main-color: #D4D4D4;
+  --second-color: #868686;
+  --third-color: #F5F5F5;
+  --btn-0: #4E4B4B;
+  --btn-1: #FBEBB5;
+  --btn-2: #fef3cf;
+
+  /* font Poppins */
+  --poppins:  'Poppins', sans-serif;
+  --md: 16px; 
+}
+

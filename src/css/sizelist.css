@@ -1,0 +1,11 @@
+
+.size-button input ~ label {
+    background-color: #FBEBB5;
+    color: #4E4B4B;
+}
+.size-button input:checked ~ label{
+    background-color: #FBEBB5;
+    color: #4E4B4B;
+    border: 2px solid #4E4B4B;
+
+}
