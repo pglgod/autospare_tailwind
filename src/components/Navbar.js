@@ -171,7 +171,7 @@ export default function Navbar() {
         <button aria-label="Close" className={style.closeIcon} onClick={toggle}>
           &times;
         </button>
-        <div className="mt-12">
+        <div className="mt-12" onClick={toggle} >
           {children}
         </div>
       </aside>

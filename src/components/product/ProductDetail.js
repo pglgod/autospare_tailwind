@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { PiShoppingBagFill } from "react-icons/pi";
 import { IoMdCart, IoMdShareAlt } from "react-icons/io";
 import { BiLogoFacebookSquare, BiLogoInstagram, BiLogoWhatsapp, BiPlusCircle } from "react-icons/bi";
+import { Link, Outlet } from 'react-router-dom';
 
 
 export default function ProductDetail() {
@@ -135,7 +136,15 @@ export default function ProductDetail() {
         </div>
         
         <div className="w-full my-10  border-b border-main-color"></div>
-        <div className="">lhkjdsn</div>
+
+        <div className="">
+            <div className="flex items-center justify-center gap-16  text-lg font-poppins ">
+                <Link >Discription</Link>
+                <Link >Review</Link>
+                <Link >Similar Products</Link>
+            </div>
+            <Outlet/>
+        </div>
 
     </div>
   )
