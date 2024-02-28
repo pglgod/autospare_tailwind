@@ -27,7 +27,7 @@ export default function Navbar() {
     <>
         <nav className='  w-screen bg-main-color  sticky z-20 top-0'>
             <div className="py-3 px-6 sm:px-12  xl:px-20 w-full flex items-center justify-between">
-              <div className=" w-32 sm:w-40 lg:w-48 h-auto">
+              <div className=" w-32 sm:w-40 lg:w-48 h-auto relative ">
                   <Link to="/" ><img className='w-full h-full' src={require('../img/logo.png')} alt="Auto Spares" /></Link>    
               </div>    
               <div className=" hidden  flex-1 lg:flex items-center justify-center">
@@ -65,7 +65,7 @@ export default function Navbar() {
 
                     <Menu as="div" className="relative inline-block text-left">
                       <div>
-                        <Menu.Button className=" text-2xl text-btn-0 cursor-pointer outline-none bg-none ">
+                        <Menu.Button className=" text-xl text-btn-0 cursor-pointer outline-none bg-none ">
                           <FaRegUser />
                         </Menu.Button>
                       </div>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 </div>
                 <div className=" block lg:hidden  cursor-pointer">
                   {/* Menu Icon */}
-                    <HiOutlineMenu className='outline-none border-none bg-none' fontSize={30} type="button" aria-disabled={open} disabled={open} onClick={toggle} />
+                    <HiOutlineMenu className='outline-none border-none text-3xl bg-none'  type="button" aria-disabled={open} disabled={open} onClick={toggle} />
                 </div>
 
               </div>
@@ -145,7 +145,7 @@ export default function Navbar() {
     item: `flex justify-start cursor-pointer font-medium hover:text-gray-400 ml-8 mb-10`,
     closeIcon: `absolute top-1 focus:outline-none right-5 text-3xl text-btn-0 cursor-pointer`,
     sidenav: {
-      open: `w-7/12 md:w-72 bg-main-color overflow-x-hidden`,
+      open: `w-9/12 md:w-72 bg-main-color overflow-x-hidden`,
       close: `w-0 bg-main-color overflow-x-hidden`,
       default: `h-screen fixed z-20 top-0 right-0 transition-all ease duration-200`,
     },
