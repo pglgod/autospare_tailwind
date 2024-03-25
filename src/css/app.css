@@ -641,11 +641,6 @@ video {
   margin-right: auto;
 }
 
-.my-10{
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
 .my-2{
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -754,10 +749,6 @@ video {
   height: 1.5rem;
 }
 
-.h-\[500px\]{
-  height: 500px;
-}
-
 .h-auto{
   height: auto;
 }
@@ -768,10 +759,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[600px\]{
-  height: 600px;
 }
 
 .max-h-60{
@@ -834,8 +821,8 @@ video {
   width: 75%;
 }
 
-.w-\[500px\]{
-  width: 500px;
+.w-\[568px\]{
+  width: 568px;
 }
 
 .w-\[90\%\]{
@@ -854,28 +841,8 @@ video {
   width: 100vw;
 }
 
-.w-\[600px\]{
-  width: 600px;
-}
-
-.w-\[550px\]{
-  width: 550px;
-}
-
-.w-\[584px\]{
-  width: 584px;
-}
-
-.w-\[568px\]{
-  width: 568px;
-}
-
 .min-w-24{
   min-width: 6rem;
-}
-
-.max-w-\[600px\]{
-  max-width: 600px;
 }
 
 .flex-1{
@@ -926,10 +893,6 @@ video {
 
 .flex-row{
   flex-direction: row;
-}
-
-.flex-row-reverse{
-  flex-direction: row-reverse;
 }
 
 .flex-col{
@@ -1201,10 +1164,6 @@ video {
   padding: 0.5rem;
 }
 
-.p-4{
-  padding: 1rem;
-}
-
 .p-3{
   padding: 0.75rem;
 }
@@ -1312,6 +1271,11 @@ video {
 .py-8{
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .pb-0{
@@ -1740,6 +1704,11 @@ video {
     padding-bottom: 2rem;
   }
 
+  .sm\:px-5{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .sm\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1801,12 +1770,12 @@ video {
     height: 350px;
   }
 
-  .md\:h-auto{
-    height: auto;
-  }
-
   .md\:h-\[600px\]{
     height: 600px;
+  }
+
+  .md\:h-auto{
+    height: auto;
   }
 
   .md\:w-36{
@@ -1845,10 +1814,6 @@ video {
     width: 100%;
   }
 
-  .md\:flex-none{
-    flex: none;
-  }
-
   .md\:grid-cols-\[auto_auto_auto\]{
     grid-template-columns: auto auto auto;
   }
@@ -1883,6 +1848,11 @@ video {
 
   .md\:gap-8{
     gap: 2rem;
+  }
+
+  .md\:px-10{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 
   .md\:px-12{
@@ -1923,11 +1893,6 @@ video {
   .md\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .md\:px-10{
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
   }
 
   .md\:text-2xl{
@@ -2010,6 +1975,10 @@ video {
     width: 400px;
   }
 
+  .lg\:w-\[500px\]{
+    width: 500px;
+  }
+
   .lg\:w-\[700px\]{
     width: 700px;
   }
@@ -2018,16 +1987,8 @@ video {
     width: auto;
   }
 
-  .lg\:w-\[500px\]{
-    width: 500px;
-  }
-
   .lg\:flex-none{
     flex: none;
-  }
-
-  .lg\:flex-auto{
-    flex: 1 1 auto;
   }
 
   .lg\:grid-cols-\[auto_auto_auto_auto\]{

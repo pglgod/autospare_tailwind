@@ -96,7 +96,7 @@ export default function ProductDetail() {
   return (
     <div className='bg-third-color' >
       
-        <div className=" w-screen py-4 px-5 md:px-10  flex flex-col lg:flex-row  gap-12">
+        <div className=" w-screen py-4 px-2 sm:px-5 md:px-10  flex flex-col lg:flex-row  gap-12">
             
             {/* img and thumbnails */}
             <div className="   lg:w-auto   md:h-[600px] lg:h-[500px] xl:h-[600px]  flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-4">
