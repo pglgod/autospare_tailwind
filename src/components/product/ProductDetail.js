@@ -96,14 +96,14 @@ export default function ProductDetail() {
   return (
     <div className='bg-third-color' >
       
-        <div className=" w-screen py-4 px-2 sm:px-5 md:px-10  flex flex-col lg:flex-row  gap-12">
+        <div className=" w-screen py-4 px-2 sm:px-5 md:px-10  flex flex-col lg:flex-row gap-2 md:gap-5 lg:gap-12">
             
             {/* img and thumbnails */}
-            <div className="   lg:w-auto   md:h-[600px] lg:h-[500px] xl:h-[600px]  flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-4">
+            <div className="   lg:w-auto   md:h-[600px] lg:h-[500px] xl:h-[600px]  flex flex-col-reverse md:flex-row-reverse lg:flex-row gap-2 md:gap-4">
                 <div className="  h-auto  w-full md:w-auto lg:h-full flex md:flex-col items-center gap-4 overflow-scroll scroll-smooth">
                     {
                         images.map((e)=>{
-                            return <div key={e.id} className=" min-w-24 w-24 h-24 p-2 bg-white shadow-md"><img src={e.url} alt={e.alt} /></div>
+                            return <div key={e.id} className=" min-w-16 md:min-w-24 w-16 h-16 md:w-24 md:h-24 p-1 md:p-2 bg-white shadow-md"><img src={e.url} alt={e.alt} /></div>
                         })
                     }
                 </div>
@@ -128,19 +128,19 @@ export default function ProductDetail() {
             {/* Name and detail */}
             <div className="flex-1">
                 
-                <div className="my-5">
-                    <h3 className='text-md text-second-color font-poppins' >Brand Name</h3>
-                    <h3 className='text-lg text-black font-poppins' >Product Name</h3>
+                <div className=" my-1 lg:my-5">
+                    <h3 className=' text-sm lg:text-md text-second-color font-poppins' >Brand Name</h3>
+                    <h3 className=' text-md lg:text-lg text-black font-poppins' >Product Name</h3>
                     <div className=" flex items-center gap-2 xl:gap-5 "> 
-                        <p className='text-lg text-btn-0 font-poppins ' >Seller : Seller Name</p>
+                        <p className=' text-md lg:text-lg text-btn-0 font-poppins ' >Seller : Seller Name</p>
                         <div className=" w-0.5 h-6 bg-main-color rounded "></div>
-                        <p className='text-md text-second-color font-poppins' > 999+ Ratings & Reviews</p>
+                        <p className=' text-sm lg:text-md text-second-color font-poppins' > 999+ Ratings & Reviews</p>
                     </div>
                     <p className=' mt-2 text-sm text-green-600 font-poppins font-medium' >Special price</p>
                     <p className='text-xl text-btn-0 font-poppins font-semibold' >₹1,200.09</p>
                     
-                    <div className=" my-5">
-                        <p className=" my-2 text-sm text-second-color font-poppins ">Size</p>
+                    <div className=" my-2 md:my-3 lg:my-5">
+                        <p className=" my-1 md:my-2 text-sm text-second-color font-poppins ">Size</p>
                         <div className=" flex items-center gap-4">
                             {/* radio buttons */}
                             {
@@ -157,15 +157,15 @@ export default function ProductDetail() {
                         </div>
                     </div>
 
-                    <div className=" my-5 flex flex-col md:flex-row lg:flex-col  gap-4 md:gap-8 lg:gap-4">
-                        <div className=" p-2 w-40 h-14 text-lg  text-btn-0 font-poppins border border-btn-0 rounded-lg relativ flex items-center justify-between">
+                    <div className=" my-3 md:my-5 flex flex-col md:flex-row lg:flex-col  gap-3 md:gap-8 lg:gap-4">
+                        <div className="  p-2 w-36 md:w-40 h-12 md:h-14 text-lg  text-btn-0 font-poppins border border-btn-0 rounded-lg relativ flex items-center justify-between">
                             <button className=' p-2 text-2xl ' disabled={quant <= 1 ? true : false}  onClick={()=>setQuant(quant - 1)} >-</button>
                                 <span >{quant}</span>
                             <button className=' p-2 text-2xl ' disabled={quant >= 10 ? true : false}  onClick={()=>setQuant(quant + 1)} >+</button>
                         </div>
-                        <div className=" flex items-center gap-4 ">
-                            <button className='w-40 py-2.5  rounded-md text-xl text-white font-poppins font-medium bg-orange-400 hover:bg-orange-500 flex items-center justify-center gap-2' > <IoMdCart/> <span>Add to cart</span></button>
-                            <button className='w-36 py-2.5  rounded-md text-xl text-white font-poppins font-medium bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2' > <PiShoppingBagFill/> <span>Buy Now</span></button>
+                        <div className=" flex-1 md:flex-none flex items-center justify-center gap-5 md:gap-6 lg:gap-4 ">
+                            <button className=' flex-1  w-40 py-2.5  rounded-sm text-xl text-white font-poppins font-medium bg-orange-400 hover:bg-orange-500 flex items-center justify-center gap-2' > <IoMdCart/> <span>Add to cart</span></button>
+                            <button className=' flex-1 w-36 py-2.5  rounded-sm text-xl text-white font-poppins font-medium bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2' > <PiShoppingBagFill/> <span>Buy Now</span></button>
                         </div>
                     </div>
 
