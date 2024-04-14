@@ -103,7 +103,9 @@ export default function ProductDetail() {
                 <div className="  h-auto  w-full md:w-auto lg:h-full flex md:flex-col items-center gap-4 overflow-scroll scroll-smooth">
                     {
                         images.map((e)=>{
-                            return <div key={e.id} className=" min-w-16 md:min-w-24 w-16 h-16 md:w-24 md:h-24 p-1 md:p-2 bg-white shadow-md"><img src={e.url} alt={e.alt} /></div>
+                            return <div key={e.id} className=" min-w-16 md:min-w-24 w-16 h-16   md:w-24 md:h-24 p-1 md:p-2 bg-white shadow-md">
+                                        <img src={e.url} alt={e.alt} />
+                                   </div>
                         })
                     }
                 </div>
@@ -139,7 +141,7 @@ export default function ProductDetail() {
                     <p className=' mt-2 text-sm text-green-600 font-poppins font-medium' >Special price</p>
                     <p className='text-xl text-btn-0 font-poppins font-semibold' >₹1,200.09</p>
                     
-                    <div className=" my-2 md:my-3 lg:my-5">
+                    <div className=" my-2 md:my-3 lg:my-5"> { /* size selctor */ }
                         <p className=" my-1 md:my-2 text-sm text-second-color font-poppins ">Size</p>
                         <div className=" flex items-center gap-4">
                             {/* radio buttons */}
