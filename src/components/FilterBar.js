@@ -11,7 +11,7 @@ export default function FilterBar() {
 
   return (
     <div>
-       <div className=" w-screen mt-[1px] px-10 py-4 flex items-center justify-between bg-main-color ">
+       <div className=" w-screen mt-[1px] px-6 sm:px-10 py-2 sm:py-4 flex items-center justify-between bg-main-color ">
         {/* filters */}
         <div className="flex items-center gap-4">
 

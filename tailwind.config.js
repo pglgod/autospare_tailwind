@@ -10,6 +10,7 @@ module.exports = {
         "btn-0": "var(--btn-0)",
         "btn-1": "var(--btn-1)",
         "btn-2": "var(--btn-2)",
+        "btn-3": "var(--btn-3)",
       },
       fontFamily: {
         poppins: "var(--poppins)",

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { PiShoppingBagFill } from "react-icons/pi";
 import { IoMdCart, IoMdShareAlt } from "react-icons/io";
 import { BiLogoFacebookSquare, BiLogoInstagram, BiLogoWhatsapp, BiPlusCircle } from "react-icons/bi";
+import { MdStar } from "react-icons/md";
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 
@@ -129,58 +130,61 @@ export default function ProductDetail() {
 
             {/* Name and detail */}
             <div className="flex-1">
+                <div className=" flex flex-col items-center justify-center">
+                    <div className=" my-1 lg:my-5 text-center ">
+                        <p className=' text-lg lg:text-xl text-btn-3 font-poppins' >Brand GUFYG</p>
+                        <p className=' text-md lg:text-lg text-black font-poppins' >Mercedes Maybach GLS Headlamp</p>
+                        <p className=' text-md lg:text-lg text-btn-0 font-poppins ' >22G Auto </p>
+                        <p className=' text-sm lg:text-md  text-second-color font-poppins flex items-center justify-center gap-1' > <span className=' py-0.5 px-1 rounded-md flex items-center justify-center bg-[#B78324] text-white' >4.2 <MdStar/></span> 99+ Ratings</p>
+
+                        <p className='text-xl text-btn-0 font-poppins font-semibold' >₹3800.68</p>
+                        <p className='text-sm text-btn-3 font-poppins font-light' >
+                            MRP <span className=' relative' >₹5000.90<span className=' left-0 top-[50%] absolute w-full h-[1px] bg-btn-3' ></span></span> <span className=' font-medium' >(24%OFF)</span>
+                        </p>
+                    
+                        <div className=" my-2 md:my-3 "> { /* size selctor */ }
+                            <p className=" my-1 md:my-2 text-sm text-second-color font-poppins ">SIZE</p>
+                            <div className=" flex items-center justify-center gap-4">
+                                {/* radio buttons */}
+                                {
+                                    sizeList.map((e) =>{
+                                        return <div className=" size-button ">
+                                            <input hidden='hidden' name="size" type="radio" id={e.id} value={e.label} 
+                                                checked={selectOpt === e.label} 
+                                                onChange={(e)=>setSelectOpt(e.target.value)}
+                                            />
+                                            <label htmlFor={e.id} className=' w-10 h-10 flex items-center justify-center rounded-sm text-lg  font-poppins    ' >{e.label}</label>
+                                        </div>
+                                    })
+                                }
+                            </div>
+                        </div>
+
+                        <div className=" my-3 md:my-5 flex flex-col   gap-3 ">
+                            {/* <div className="  p-2 w-36 md:w-40 h-12 md:h-14 text-lg  text-btn-0 font-poppins border border-btn-0 rounded-lg relativ flex items-center justify-between"> */}
+                            <div className="  p-2 w-full h-12  text-lg  text-btn-0 font-poppins border border-btn-0 rounded-md relativ flex items-center justify-between">
+                                <button className=' p-2 text-2xl ' disabled={quant <= 1 ? true : false}  onClick={()=>setQuant(quant - 1)} >-</button>
+                                    <span >{quant}</span>
+                                <button className=' p-2 text-2xl ' disabled={quant >= 10 ? true : false}  onClick={()=>setQuant(quant + 1)} >+</button>
+                            </div>
+
+                            <div className=" flex-1 md:flex-none flex items-center justify-center gap-4 md:gap-6 lg:gap-4 ">
+                                <button className=' flex-1  w-40 py-2.5  rounded-sm text-xl font-light text-btn-3 font-poppins bg-white hover:bg-btn-2 border border-btn-3 flex items-center justify-center gap-2' > <IoMdCart/> <span>Add to Cart</span></button>
+                                <button className=' flex-1 w-36 py-2.5  rounded-sm text-xl text-white font-poppins font-light bg-btn-3 hover:text-btn-2 flex items-center justify-center gap-2' > <PiShoppingBagFill/> <span>Buy Now</span></button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="my-3 px-3 w-full ">
+                        <div className=" w-full flex items-center text-second-color text-md gap-4"><p className=' ' >SKU :</p> <p className=' flex-1 ' >HBJ525B </p></div>
+                        <div className=" w-full flex items-center text-second-color text-md gap-4"><p className=' ' >Category :</p> <p className=' flex-1 ' >Wheals & Tyres</p></div>
+                        <div className=" w-full flex items-center text-second-color text-md gap-4"><p className=' ' >Tag's :</p> <p className=' flex-1 ' >AL-13, Wheals, Tyres</p></div>
+                    
+                    </div>
+                </div>
                 
-                <div className=" my-1 lg:my-5">
-                    <h3 className=' text-sm lg:text-md text-second-color font-poppins' >Brand Name</h3>
-                    <h3 className=' text-md lg:text-lg text-black font-poppins' >Product Name</h3>
-                    <div className=" flex items-center gap-2 xl:gap-5 "> 
-                        <p className=' text-md lg:text-lg text-btn-0 font-poppins ' >Seller : Seller Name</p>
-                        <div className=" w-0.5 h-6 bg-main-color rounded "></div>
-                        <p className=' text-sm lg:text-md text-second-color font-poppins' > 999+ Ratings & Reviews</p>
-                    </div>
-                    <p className=' mt-2 text-sm text-green-600 font-poppins font-medium' >Special price</p>
-                    <p className='text-xl text-btn-0 font-poppins font-semibold' >₹1,200.09</p>
-                    
-                    <div className=" my-2 md:my-3 lg:my-5"> { /* size selctor */ }
-                        <p className=" my-1 md:my-2 text-sm text-second-color font-poppins ">Size</p>
-                        <div className=" flex items-center gap-4">
-                            {/* radio buttons */}
-                            {
-                                sizeList.map((e) =>{
-                                    return <div className=" size-button ">
-                                        <input hidden='hidden' name="size" type="radio" id={e.id} value={e.label} 
-                                            checked={selectOpt === e.label} 
-                                            onChange={(e)=>setSelectOpt(e.target.value)}
-                                        />
-                                        <label htmlFor={e.id} className=' w-10 h-10 flex items-center justify-center rounded-md text-lg  font-poppins    ' >{e.label}</label>
-                                    </div>
-                                })
-                            }
-                        </div>
-                    </div>
-
-                    <div className=" my-3 md:my-5 flex flex-col md:flex-row lg:flex-col  gap-3 md:gap-8 lg:gap-4">
-                        <div className="  p-2 w-36 md:w-40 h-12 md:h-14 text-lg  text-btn-0 font-poppins border border-btn-0 rounded-lg relativ flex items-center justify-between">
-                            <button className=' p-2 text-2xl ' disabled={quant <= 1 ? true : false}  onClick={()=>setQuant(quant - 1)} >-</button>
-                                <span >{quant}</span>
-                            <button className=' p-2 text-2xl ' disabled={quant >= 10 ? true : false}  onClick={()=>setQuant(quant + 1)} >+</button>
-                        </div>
-                        <div className=" flex-1 md:flex-none flex items-center justify-center gap-5 md:gap-6 lg:gap-4 ">
-                            <button className=' flex-1  w-40 py-2.5  rounded-sm text-xl text-white font-poppins font-medium bg-orange-400 hover:bg-orange-500 flex items-center justify-center gap-2' > <IoMdCart/> <span>Add to cart</span></button>
-                            <button className=' flex-1 w-36 py-2.5  rounded-sm text-xl text-white font-poppins font-medium bg-green-600 hover:bg-green-700 flex items-center justify-center gap-2' > <PiShoppingBagFill/> <span>Buy Now</span></button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className=" mt-10 mb-5 flex-1 border-b border-main-color "></div>
-
-                <div className="">
-                    <div className="flex items-center text-second-color text-md gap-2"><p className=' w-20' >SKU</p> : HBJ525B </div>
-                    <div className="flex items-center text-second-color text-md gap-2"><p className=' w-20' >Category</p> : Wheals & Tyres</div>
-                    <div className="flex items-center text-second-color text-md gap-2"><p className=' w-20' >Tag's</p> : AL-13, Wheals, Tyres</div>
-                    
-                </div>
+                
 
             </div>
         </div>

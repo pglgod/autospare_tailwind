@@ -554,6 +554,10 @@ video {
   position: sticky;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
 .left-0{
   left: 0px;
 }
@@ -618,12 +622,24 @@ video {
   top: 2.5rem;
 }
 
+.top-\[50\%\]{
+  top: 50%;
+}
+
 .z-20{
   z-index: 20;
 }
 
 .m-auto{
   margin: auto;
+}
+
+.m-\[1\]{
+  margin: 1;
+}
+
+.m-\[1px\]{
+  margin: 1px;
 }
 
 .mx-3{
@@ -664,6 +680,11 @@ video {
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .mb-1{
@@ -750,12 +771,16 @@ video {
   height: 6rem;
 }
 
-.h-6{
-  height: 1.5rem;
-}
-
 .h-72{
   height: 18rem;
+}
+
+.h-9{
+  height: 2.25rem;
+}
+
+.h-\[1px\]{
+  height: 1px;
 }
 
 .h-auto{
@@ -772,6 +797,22 @@ video {
 
 .max-h-60{
   max-height: 15rem;
+}
+
+.min-h-80{
+  min-height: 20rem;
+}
+
+.min-h-72{
+  min-height: 18rem;
+}
+
+.min-h-64{
+  min-height: 16rem;
+}
+
+.min-h-48{
+  min-height: 12rem;
 }
 
 .w-0{
@@ -832,6 +873,10 @@ video {
 
 .w-9\/12{
   width: 75%;
+}
+
+.w-96{
+  width: 24rem;
 }
 
 .w-\[568px\]{
@@ -1041,10 +1086,6 @@ video {
   white-space: nowrap;
 }
 
-.rounded{
-  border-radius: 0.25rem;
-}
-
 .rounded-full{
   border-radius: 9999px;
 }
@@ -1102,8 +1143,22 @@ video {
   border-color: var(--btn-1);
 }
 
+.border-btn-3{
+  border-color: var(--btn-3);
+}
+
+.border-gray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
 .border-main-color{
   border-color: var(--main-color);
+}
+
+.bg-\[\#B78324\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(183 131 36 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#ffffff70\]{
@@ -1127,18 +1182,12 @@ video {
   background-color: var(--btn-2);
 }
 
-.bg-green-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 163 74 / var(--tw-bg-opacity));
+.bg-btn-3{
+  background-color: var(--btn-3);
 }
 
 .bg-main-color{
   background-color: var(--main-color);
-}
-
-.bg-orange-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(251 146 60 / var(--tw-bg-opacity));
 }
 
 .bg-second-color{
@@ -1183,6 +1232,10 @@ video {
 
 .p-3{
   padding: 0.75rem;
+}
+
+.p-\[2px\]{
+  padding: 2px;
 }
 
 .px-1{
@@ -1323,6 +1376,10 @@ video {
   text-align: center;
 }
 
+.text-right{
+  text-align: right;
+}
+
 .font-poppins{
   font-family: var(--poppins);
 }
@@ -1394,6 +1451,10 @@ video {
   text-transform: uppercase;
 }
 
+.capitalize{
+  text-transform: capitalize;
+}
+
 .text-amber-900{
   --tw-text-opacity: 1;
   color: rgb(120 53 15 / var(--tw-text-opacity));
@@ -1417,14 +1478,13 @@ video {
   color: var(--btn-1);
 }
 
+.text-btn-3{
+  color: var(--btn-3);
+}
+
 .text-green-500{
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
-}
-
-.text-green-600{
-  --tw-text-opacity: 1;
-  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
 .text-main-color{
@@ -1535,6 +1595,7 @@ video {
   --btn-0: #4E4B4B;
   --btn-1: #FBEBB5;
   --btn-2: #fef3cf;
+  --btn-3: #986F23;
   /* font Poppins */
   --poppins:  'Poppins', sans-serif;
   --md: 16px;
@@ -1552,22 +1613,24 @@ video {
   color: var(--second-color);
 }
 
+.hover\:border-\[2px\]:hover{
+  border-width: 2px;
+}
+
+.hover\:border-2:hover{
+  border-width: 2px;
+}
+
+.hover\:border:hover{
+  border-width: 1px;
+}
+
 .hover\:bg-btn-1:hover{
   background-color: var(--btn-1);
 }
 
 .hover\:bg-btn-2:hover{
   background-color: var(--btn-2);
-}
-
-.hover\:bg-green-700:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(21 128 61 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-orange-500:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 115 22 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-second-color:hover{
@@ -1599,6 +1662,10 @@ video {
 
 .hover\:text-btn-1:hover{
   color: var(--btn-1);
+}
+
+.hover\:text-btn-2:hover{
+  color: var(--btn-2);
 }
 
 .hover\:text-gray-400:hover{
@@ -1643,6 +1710,10 @@ video {
 }
 
 @media (min-width: 640px){
+  .sm\:inline-block{
+    display: inline-block;
+  }
+
   .sm\:h-56{
     height: 14rem;
   }
@@ -1687,6 +1758,10 @@ video {
     gap: 0.5rem;
   }
 
+  .sm\:gap-5{
+    gap: 1.25rem;
+  }
+
   .sm\:p-4{
     padding: 1rem;
   }
@@ -1724,6 +1799,11 @@ video {
   .sm\:py-8{
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:py-4{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .sm\:text-2xl{
@@ -2204,10 +2284,6 @@ video {
 
   .xl\:gap-28{
     gap: 7rem;
-  }
-
-  .xl\:gap-5{
-    gap: 1.25rem;
   }
 
   .xl\:gap-8{
