@@ -17,8 +17,8 @@ export default function Signup() {
 
         <div className=" w-full h-full md:h-auto md:w-auto py-3 px-8 flex flex-col items-center justify-center bg-white shadow-md border border-btn-1 ">
           <div className="py-10">
-            <p className='   text-xl text-second-color uppercase text-center' >SignUp here to </p>
-            <p className='   text-xl text-second-color  text-center' >start shopping with AutoSpares</p>
+            <p className='   text-xl text-second-color capitalize text-center' >SignUp here to </p>
+            <p className='   text-xl text-second-color capitalize text-center' >start shopping with AutoSpares</p>
           </div>
           <form onSubmit={(e)=>e.preventDefault()} action="" method="post" className=' w-full sm:w-auto text-btn-0 font-poppins flex flex-col items-center gap-4'>
 
@@ -47,7 +47,7 @@ export default function Signup() {
                   <label htmlFor="password" className=' absolute left-3 text-md' ><HiOutlineLockOpen/></label>
                 </div>
                 <div className=" w-full sm:w-80  flex items-center relative">
-                  <input className=' w-full pl-10 py-2 text-md border border-btn-0 outline-none' name='password' type={isChecked? 'text' : 'password'}  placeholder='Password' />
+                  <input className=' w-full pl-10 py-2 text-md border border-btn-0 outline-none' name='password' type='password'  placeholder=' Conferm Password' />
                   <label htmlFor="password" className=' absolute left-3 text-md' ><PiPassword/></label>
                 </div>
             </div>
@@ -56,12 +56,12 @@ export default function Signup() {
 
               <div className=" w-full sm:w-80 md:full  flex items-center relative gap-2 text-md">
                 <input type="checkbox" name="show" checked={isChecked} onChange={(e)=>{setChecked(e.target.checked)}} />
-                <p  >Check password</p>
+                <p  >terms & conditions</p>
               </div>
             </div>
 
             <div className=" w-full sm:w-80 md:w-full  mt-4 relative ">
-              <input className='w-full py-2 bg-btn-1 hover:bg-btn-2 text-btn-0 uppercase ' type="submit" value="r e g i s t e r" />
+              <input className='w-full py-2 bg-btn-2 hover:bg-btn-1 cursor-pointer text-btn-0 font-light uppercase ' type="submit" value="r e g i s t e r" />
             </div>
 
           </form>

@@ -37,7 +37,7 @@ export default function Login() {
           </div>
 
           <div className=" w-72 md:w-80  mt-4 relative ">
-            <input className='w-full py-2 bg-btn-1 hover:bg-btn-2 text-btn-0' type="submit" value="LogIn" />
+            <input className='w-full py-2 bg-btn-2 hover:bg-btn-1 text-btn-0 font-light' type="submit" value="LogIn" />
           </div>
 
         </form>

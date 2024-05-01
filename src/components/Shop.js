@@ -11,7 +11,7 @@ export default function Shop() {
       {/* Products List */}
       <div >
         <div className="  h-full mx-auto md:px-6 py-6 overflow-y-scroll gap-6 grid place-items-center place-content-center grid-cols-[auto] sm:grid-cols-[auto_auto] md:grid-cols-[auto_auto_auto] lg:grid-cols-[auto_auto_auto_auto] xl:grid-cols-[auto_auto_auto_auto_auto]  ">
-          <ProductCard  />
+          <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
